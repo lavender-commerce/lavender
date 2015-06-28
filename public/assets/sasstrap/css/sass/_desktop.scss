@@ -1,0 +1,11 @@
+/*
+Generic desktop sizes
+*/
+
+input[type="text"],input[type="email"],input[type="number"],input[type="search"],select,textarea{
+    @extend .form-control;
+}
+
+button,input[type="submit"]{
+    @extend .btn-default;
+}

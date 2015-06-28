@@ -28,8 +28,7 @@ return [
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
-
+	'host' => 'smtp.gmail.com',
 	/*
 	|--------------------------------------------------------------------------
 	| SMTP Host Port
@@ -54,7 +53,8 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'matteusbarbosa2@gmail.com', 'name' => 'Administrador da Loja'],
+
 
 	/*
 	|--------------------------------------------------------------------------

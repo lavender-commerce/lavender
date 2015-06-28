@@ -1,0 +1,31 @@
+/*
+Sass based customizable theme, called Zero. Default colorset is FLAT.
+*/
+
+
+/*
+* Flat colors set
+*/
+
+$red: #ea6153;
+$blue: #2980b9;
+$green: #2ecc71;
+$yellow: #f1c40f;
+$purple: #9b59b6;
+$gray: #7f8c8d;
+$white: #ecf0f1;
+$xs: 6px;
+$sm: 12px; 
+$md: 18px; 
+$lg: 36px;
+  
+/* Theme customization */ 
+$color-protagonist: $green;
+$color-supporting: $white;
+
+
+/*Partials import - customize your needs before compilation*/
+@import 'bootstrap';
+@import 'desktop'; 
+@import 'tablet';
+@import 'phone'; 
