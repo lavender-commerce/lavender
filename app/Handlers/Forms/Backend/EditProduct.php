@@ -4,7 +4,7 @@ namespace App\Handlers\Forms\Backend;
 use App\Support\Facades\Message;
 use Lavender\Contracts\Form;
 
-class EditProduct extends EditEntity
+class EditProduct
 {
 
     /**
@@ -12,11 +12,20 @@ class EditProduct extends EditEntity
      */
     public function handle_product(Form $form)
     {
-        $entity = $this->handle_entity($form, 'product');
+        $request = $form->request->all();
+
+        $product = $request->product;
+        $category = $request->category;
+
+        $product->fill($request);
+
+        $product->save();
+
+        $product->update(['categories' => ['category' => $request['category']]]);
 
         Message::addSuccess(sprintf(
             "Product \"%s\" was saved successfully.",
-            $entity->id
+            $product->id
         ));
     }
 
